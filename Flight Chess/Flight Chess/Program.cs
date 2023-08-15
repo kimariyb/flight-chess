@@ -86,50 +86,93 @@ namespace Flight_Chess
             // 第一行
             for (int i = 0; i < 30; i++)
             {
-                // 如果玩家 A 和玩家 B 的坐标相同，画一个符号 <>
-                if (_playerPos[0] == _playerPos[1] && _playerPos[1] == i)
-                {
-                    Console.Write("<>");
-                }
-                else if (_playerPos[0] == i)
-                {
-                    // 全角　Ａ　Ｂ
-                    Console.Write("Ａ");
-                }
-                else if (_playerPos[1] == i)
-                {
-                    // 全角　Ａ　Ｂ
-                    Console.Write("Ｂ");
-                }
-                else
-                {
-                    switch (_map[i])
-                    {
-                        case 0:
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.Write("□");
-                            break;
-                        case 1: 
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.Write("◎");
-                            break;
-                        case 2: 
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write("☆");
-                            break;
-                        case 3: 
-                            Console.ForegroundColor = ConsoleColor.Blue;
-
-                            Console.Write("▲");
-                            break;
-                        case 4: 
-                            Console.ForegroundColor = ConsoleColor.DarkCyan;
-                            Console.Write("※");
-                            break;
-                    }
-                }
-
+                Console.Write(DrawStringMap(i));
             }
+            // 空行
+            Console.WriteLine();
+            // 第一列
+            for (int i = 30; i < 35; i++)
+            {
+                for (int j = 0; j <= 28; j++)
+                {
+                    Console.Write("  ");
+                }
+
+                Console.Write(DrawStringMap(i));
+
+                // 换行
+                Console.WriteLine();
+            }
+            // 第二行
+            for (int i = 64; i >= 35; i--)
+            {
+                Console.Write(DrawStringMap(i));
+            }
+            // 空行
+            Console.WriteLine();
+            // 第二列
+            for (int i = 65; i <= 69; i++)
+            {
+                Console.WriteLine(DrawStringMap(i));
+            }
+            // 第三行
+            for (int i = 70; i <= 99; i++)
+            {
+                Console.Write(DrawStringMap(i));
+            }
+
+
+        }
+        
+        /// <summary>
+        /// 封装一个方法用来输出字符
+        /// </summary>
+        static string DrawStringMap(int i)
+        {
+            string str = "";
+            // 如果玩家 A 和玩家 B 的坐标相同，画一个符号 <>
+            if (_playerPos[0] == _playerPos[1] && _playerPos[1] == i)
+            {
+                str = "<>";
+            }
+            else if (_playerPos[0] == i)
+            {
+                // 全角　Ａ　Ｂ
+                str = "Ａ";
+            }
+            else if (_playerPos[1] == i)
+            {
+                // 全角　Ａ　Ｂ
+                str = "Ｂ";
+            }
+            else
+            {
+                switch (_map[i])
+                {
+                    case 0:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        str = "□";
+                        break;
+                    case 1: 
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        str = "◎";
+                        break;
+                    case 2: 
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        str = "☆";
+                        break;
+                    case 3: 
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        str = "▲";
+                        break;
+                    case 4: 
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        str = "※";
+                        break;
+                }
+            }
+
+            return str;
         }
     }
 }
