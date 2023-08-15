@@ -1,0 +1,7 @@
+D:\project\flight-chess\Flight Chess\Flight Chess\bin\Debug\Flight_Chess.exe
+D:\project\flight-chess\Flight Chess\Flight Chess\bin\Debug\Flight_Chess.pdb
+D:\project\flight-chess\Flight Chess\Flight Chess\obj\Debug\Flight Chess.csproj.AssemblyReference.cache
+D:\project\flight-chess\Flight Chess\Flight Chess\obj\Debug\Flight Chess.csproj.SuggestedBindingRedirects.cache
+D:\project\flight-chess\Flight Chess\Flight Chess\obj\Debug\Flight Chess.csproj.CoreCompileInputs.cache
+D:\project\flight-chess\Flight Chess\Flight Chess\obj\Debug\Flight_Chess.exe
+D:\project\flight-chess\Flight Chess\Flight Chess\obj\Debug\Flight_Chess.pdb
